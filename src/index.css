@@ -3,12 +3,12 @@
     margin: 0;
 }
 .mddisplay {
-    font-size: 30px;
     margin-top: 10px;
     overflow: auto;
 }
 .mdinputarea {
-    width: 40%;
+  min-width: 100px;
+    width: 40vw;
     resize: horizontal;
     overflow: auto;
     height: 90vh;
@@ -30,6 +30,7 @@
 /* scroll bar */
 ::-webkit-scrollbar {
     width: 12px;
+    height: 12px;
 }
   ::-webkit-scrollbar-button {
     display: none;
