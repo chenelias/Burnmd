@@ -13,5 +13,9 @@
 https://burnmd.vercel.app
 
 ### NoCopyRight
-Code by [*EliasChen*](https://eliaschenabout.vercel.app)
+Code by [*EliasChen*](https://eliaschenabout.vercel.app)\
 Deployed by ▲ Vercel
+
+---
+
+[Learn more about MarkDown](https://daringfireball.net/projects/markdown/)
