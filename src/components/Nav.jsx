@@ -1,18 +1,29 @@
 import { Button } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
-function Nav() {
-    var [togglemdfontsize, settogglemdfontsize] = React.useState(40)
-
+import { BiFontSize } from 'react-icons/bi'
+import '../index.css'
+function Nav(props) {
+    function add() {
+        props.settogglemdfontsize((prevCount) => (prevCount < 200 ? prevCount + 5 : prevCount + 0))
+    }
+    function subtract() {
+        props.settogglemdfontsize((prevCount) => (prevCount > 10 ? prevCount - 5 : prevCount - 0))
+    }
     return (
-        <div>
-            <Button className="togglefontsize-btn">
-                <AiOutlinePlus />
-            </Button>
-
-            <Button className="togglefontsize-btn">
-                <AiOutlineMinus />
-            </Button>
+        <div className="nav">
+            <div className='nav-togglesize'>
+                <p className="react-icon">
+                    <BiFontSize />
+                </p>
+                <Button onClick={subtract} className="togglefontsize-btn">
+                    <AiOutlineMinus />
+                </Button>
+                <p className="togglefontsize-text">{props.togglemdfontsize}</p>
+                <Button onClick={add} className="togglefontsize-btn">
+                    <AiOutlinePlus />
+                </Button>
+            </div>
         </div>
     )
 }
