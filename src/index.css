@@ -10,6 +10,12 @@
     margin-right: 5px;
     line-height: auto;
   }
+body{
+  background-color: #fff;
+}
+body .darkmode{
+  background-color:#1b1f2d ;
+}
 .mdinputarea {
     min-width: 10vw;
     width: 40vw;

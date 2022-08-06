@@ -11,6 +11,9 @@ function Nav(props) {
     function subtract() {
         props.settogglemdfontsize((prevCount) => (prevCount > 10 ? prevCount - 5 : prevCount - 0))
     }
+    function togglebackgroundcolor(){
+        
+    }
     return (
         <div className="nav">
             <div className="nav-togglesize">

@@ -5,11 +5,12 @@ import React,{useState} from 'react'
 
 function App() {
     var [togglemdfontsize, settogglemdfontsize] = useState(40)
+    var [togglecolormode,settogglecolormode] = useState(false)
     return (
-        <>
-            <Nav togglemdfontsize={togglemdfontsize} settogglemdfontsize={settogglemdfontsize}/>
+        <div className="body-colormode">
+            <Nav togglecolormode={togglecolormode} settogglecolormode={settogglecolormode} togglemdfontsize={togglemdfontsize} settogglemdfontsize={settogglemdfontsize}/>
             <Editor togglemdfontsize={togglemdfontsize}  />
-        </>
+        </div>
     )
 }
 export default App
