@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import '../index.css'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 function Editor(props) {
-    var [mdinput, setmdinput] = useState()
+    const [mdinput, setmdinput] = useState(() => JSON.parse(localStorage.getItem('mdinput')) || [])
+    useEffect(() => {
+        localStorage.setItem('mdinput', JSON.stringify(mdinput))
+    })
     const toggleinput = (x) => {
         var y = x.target.value
         setmdinput(y)

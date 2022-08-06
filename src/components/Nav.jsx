@@ -2,6 +2,7 @@ import { Button } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import { BiFontSize } from 'react-icons/bi'
+import { BsFillMoonStarsFill,BsFillSunFill } from 'react-icons/bs'
 import '../index.css'
 function Nav(props) {
     function add() {
@@ -12,7 +13,7 @@ function Nav(props) {
     }
     return (
         <div className="nav">
-            <div className='nav-togglesize'>
+            <div className="nav-togglesize">
                 <p className="react-icon">
                     <BiFontSize />
                 </p>
@@ -23,6 +24,9 @@ function Nav(props) {
                 <Button onClick={add} className="togglefontsize-btn">
                     <AiOutlinePlus />
                 </Button>
+            </div>
+            <div className="togglecolormode">
+                <Button className='togglecolormode-btn'><BsFillMoonStarsFill/></Button>
             </div>
         </div>
     )
