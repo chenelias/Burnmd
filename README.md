@@ -12,10 +12,11 @@
 ### link
 https://burnmd.vercel.app
 
-### NoCopyRight
+### Info
 Code by [*EliasChen*](https://eliaschenabout.vercel.app)\
 Deployed by ▲ Vercel
 
+### MIT License
 ---
 
 [Learn more about MarkDown](https://daringfireball.net/projects/markdown/)
