@@ -29,7 +29,7 @@ function Nav(props) {
     props.settogglecolormode((x) => !x);
   }
   function quickaddtexthashtag() {
-    textareainput.value += "# ";
+    textareainput.value += "#";
     textareainput.focus();
   }
   function quickaddtextmark() {
@@ -37,7 +37,7 @@ function Nav(props) {
     textareainput.focus();
   }
   function quickaddtextdash() {
-    textareainput.value += "- ";
+    textareainput.value += "-";
     textareainput.focus();
   }
   React.useEffect(() => {
