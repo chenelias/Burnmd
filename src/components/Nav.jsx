@@ -65,7 +65,7 @@ function Nav(props) {
         <Button onClick={quickaddtextdash} className="quickadd-btn">
           -
         </Button>
-        <Button onClick={quickaddtextdash} className="quickadd-btn">
+        <Button onClick={quickaddtextmark} className="quickadd-btn">
           *
         </Button>
       </div>
