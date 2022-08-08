@@ -40,9 +40,13 @@ function Nav(props) {
           <AiOutlinePlus />
         </Button>
       </div>
+      {/* <div className="quickadd">
+        <Button className="quickadd-btn">#</Button>
+        <Button className="quickadd-btn">*</Button>
+      </div> */}
       <div className="togglecolormode">
         <Button onClick={togglebackgroundcolor} className="togglecolormode-btn">
-          <BsFillMoonStarsFill />
+          {togglecolormode ? <BsFillSunFill />:<BsFillMoonStarsFill />} 
         </Button>
       </div>
     </div>

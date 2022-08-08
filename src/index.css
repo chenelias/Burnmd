@@ -4,7 +4,6 @@
 }
 
 .mddisplay {
-  height: 40vw !important;
   overflow: auto;
   border-radius: 10px;
   padding: 10px;
@@ -15,6 +14,7 @@
 body {
   padding-bottom: 0;
   padding-top: 10px;
+  transition: 0.2s;
 }
 
 .mdinputarea {
@@ -28,11 +28,12 @@ body {
   border-radius: 10px;
   margin-left: 5px;
   margin-right: 15px;
+  transition: 0.2s;
 }
 
 .mdinputarea:focus {
   outline: none !important;
-  border: 3px solid #3182ce;
+  border: 3px solid #3182ce !important;
 }
 
 .mdeditor {
@@ -125,6 +126,28 @@ body {
   align-items: center;
   display: flex;
   margin-right: 2px;
+}
+
+.quickadd-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 10px;
+  font-size: 28px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.quickadd-btn:hover {
+  background-color: #c0bbbb;
+}
+
+.quickadd-btn:active {
+  font-size: 20px;
 }
 
 .togglecolormode-btn {
