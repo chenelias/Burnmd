@@ -1,7 +1,6 @@
 # BurnMd
 
-![image](https://user-images.githubusercontent.com/76611085/183342132-130b8308-d691-4f00-9aae-ce4919498227.png)
-
+![image](https://user-images.githubusercontent.com/76611085/183416633-fdd36476-b464-43a2-8584-3891fb8b0842.png)
 
 ### About
 ***BurnMd***  is the very simple markdown Editor code with React.js .
@@ -10,6 +9,7 @@
 - Edit markdown code on left side window and view output on right side area.
 - Change fontSize of markdown output.
 - Toggle color mode with Dark/Light.
+- Use the quick add tools to add character more easy on phone device.
 - Change size of edit window with right side bottom drag icon.
 
 ### link
