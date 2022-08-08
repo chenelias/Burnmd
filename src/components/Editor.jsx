@@ -22,7 +22,7 @@ function Editor(props) {
         style={{
           background: props.togglecolormode ? "#191e2a" : "#fff",
           color: props.togglecolormode ? "#fff" : "#000",
-          border: props.togglecolormode ? "3px solid #fff":"3px solid #000",
+          border: props.togglecolormode ? "3px solid #fff" : "3px solid #000",
         }}
         name="input"
         onChange={toggleinput}
