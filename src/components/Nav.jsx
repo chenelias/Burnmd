@@ -17,7 +17,7 @@ function Nav(props) {
 
   function add() {
     props.settogglemdfontsize((prevCount) =>
-      prevCount < 200 ? prevCount + 5 : prevCount + 0
+      prevCount <  ? prevCount + 5 : prevCount + 0
     );
   }
   function subtract() {
