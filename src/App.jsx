@@ -6,6 +6,7 @@ import React, { useState } from "react";
 function App() {
   var [togglemdfontsize, settogglemdfontsize] = useState(30);
   var [togglecolormode, settogglecolormode] = useState(false);
+    const [mdinput, setmdinput] = useState()
 
   return (
     <div className="body">
@@ -13,12 +14,15 @@ function App() {
         togglecolormode={togglecolormode}
         settogglecolormode={settogglecolormode}
         togglemdfontsize={togglemdfontsize}
+        mdinput={mdinput}
         settogglemdfontsize={settogglemdfontsize}
       />
       <Editor
         togglecolormode={togglecolormode}
         settogglecolormode={settogglecolormode}
         togglemdfontsize={togglemdfontsize}
+        mdinput={mdinput}
+        setmdinput={setmdinput}
       />
     </div>
   );
