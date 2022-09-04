@@ -94,7 +94,7 @@ function Nav(props) {
                 </Button>
             </div>
             <div className="togglecolormode">
-                <Button onClick={togglebackgroundcolor} className="togglecolormode-btn">
+                <Button title="Toggle ColorMode" onClick={togglebackgroundcolor} className="togglecolormode-btn">
                     {togglecolormode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
                 </Button>
             </div>
