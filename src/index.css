@@ -9,7 +9,7 @@
   padding: 10px;
   margin-right: 5px;
   line-height: auto;
-  width: 60vw;
+  max-width: 60vw;
   height: 80vh;
 }
 
@@ -20,8 +20,8 @@ body {
 }
 
 .mdinputarea {
-  min-width: 10vw;
-  width: 40vw;
+  min-width: 40vw;
+  max-width: 50vw;
   resize: horizontal;
   overflow: auto;
   height: 80vh;
@@ -30,7 +30,7 @@ body {
   border-radius: 10px;
   margin-left: 5px;
   margin-right: 15px;
-  transition: 0.1s;
+  transition: 0s;
 }
 
 .mdinputarea:focus {
