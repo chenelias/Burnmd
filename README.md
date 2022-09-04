@@ -11,6 +11,7 @@
 - Toggle color mode with Dark/Light.
 - Use the quick add tools to add character more easy on phone device.
 - Change size of edit window with right side bottom drag icon.
+- Download editor file with markdown
 
 ### link
 https://burnmd.vercel.app

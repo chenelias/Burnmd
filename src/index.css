@@ -9,6 +9,8 @@
   padding: 10px;
   margin-right: 5px;
   line-height: auto;
+  width: 60vw;
+  height: 80vh;
 }
 
 body {
@@ -74,6 +76,8 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     overflow: auto;
+    width: 88vw !important;
+    height: 40vw ! important;
   }
 
   .mdinputarea {
@@ -204,6 +208,7 @@ body {
 }
 
 .downloadwindow {
+  color: #000 !important;
   position: absolute;
   /* border: solid 2px #000 ; */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
@@ -255,4 +260,28 @@ body {
 
 .downloadinput-btn1:hover {
   background-color: #0f960b;
+}
+
+.info {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgb(219, 219, 219);
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  opacity: 5px;
+  transition: 0.2s;
+}
+.info:hover{
+  background-color: rgb(148, 148, 148);
+}
+.info-link {
+  color: #fff !important;
+  font-size: 35px;
+  position: relative;
+  right: 2px;
+  top: -2px;
+
 }

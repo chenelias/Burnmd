@@ -1,15 +1,16 @@
 import { saveAs } from 'file-saver'
 import { Button } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
-import { BiFontSize } from 'react-icons/bi'
+import { AiOutlinePlus, AiOutlineMinus, AiOutlineInfoCircle } from 'react-icons/ai'
+import { BiFontSize, BiSleepy } from 'react-icons/bi'
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 import { GrDocumentDownload } from 'react-icons/gr'
 import '../index.css'
 function Nav(props) {
     const filenametoggle = (x) => {
         var y = x.target.value
-        setfilename(y + '.md')
+        var outputy = y===''?'README':y;
+        setfilename(outputy)
     }
     const bodystyle = document.querySelector('body')
     const textareainput = document.querySelector('textarea')
@@ -45,22 +46,26 @@ function Nav(props) {
     }, [togglecolormode])
 
     function downloadfile() {
-        var file = new File([props.mdinput], `${filename}`, { type: 'markdown/plain;charset=utf-8' })
+        var file = new File([props.mdinput], `${filename + '.md'}`, { type: 'markdown/plain;charset=utf-8' })
         saveAs(file)
+        setdownloadwindow(false)
     }
     return (
         <div className="nav">
+            <div className="info">
+                <a className='info-link' target='_blank' href='https://github.com/chenelias/burnmd'><AiOutlineInfoCircle/></a>
+            </div>
             <div className="downloadwindow" style={{ display: downloadwindow ? 'block' : 'none' }}>
-                <h2>File name</h2>
+                <h1>File name</h1>
                 <div className="downloadinput-div">
                     <input onChange={filenametoggle} placeholder="README" type="text" className="rename-input" />
                     <h2>.md</h2>
                 </div>
                 <div className="downloadinput-btn-div" style={{ display: 'flex' }}>
-                    <button className="downloadinput-btn1" style={{ marginRight: 10 }}>
+                    <button onClick={downloadfile} className="downloadinput-btn1" style={{ marginRight: 10 }}>
                         Download
                     </button>
-                    <button onClick={()=>setdownloadwindow(x=>!x)} className="downloadinput-btn2">
+                    <button onClick={() => setdownloadwindow(false)} className="downloadinput-btn2">
                         Cancel
                     </button>
                 </div>
