@@ -18,7 +18,7 @@ function Nav(props) {
     var setcolormode = togglecolormode ? '#191e2a' : '#fff'
     var setcolormodetext = togglecolormode ? '#fff' : '#000'
     const [downloadwindow, setdownloadwindow] = useState(false)
-    const [filename, setfilename] = useState('README.md')
+    const [filename, setfilename] = useState('README')
     function add() {
         props.settogglemdfontsize((prevCount) => (prevCount < 70 ? prevCount + 5 : prevCount + 0))
     }
