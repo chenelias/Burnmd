@@ -55,7 +55,7 @@ function Nav(props) {
             <div className="info">
                 <a className='info-link' target='_blank' href='https://github.com/chenelias/burnmd'><AiOutlineInfoCircle/></a>
             </div>
-            <div className="downloadwindow" style={{ display: downloadwindow ? 'block' : 'none' }}>
+            <div className="downloadwindow" style={{ display: downloadwindow ? 'block' : 'none',alignItems:'center' }}>
                 <h1><BsFillFileEarmarkArrowDownFill/>Save file</h1>
                 <div className="downloadinput-div">
                     <input onChange={filenametoggle} placeholder="README" type="text" className="rename-input" />
