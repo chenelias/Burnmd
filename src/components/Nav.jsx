@@ -3,7 +3,7 @@ import { Button } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineInfoCircle } from 'react-icons/ai'
 import { BiFontSize, BiSleepy } from 'react-icons/bi'
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
+import { BsFillMoonStarsFill, BsFillSunFill,BsFillFileEarmarkArrowDownFill } from 'react-icons/bs'
 import { GrDocumentDownload } from 'react-icons/gr'
 import '../index.css'
 function Nav(props) {
@@ -56,7 +56,7 @@ function Nav(props) {
                 <a className='info-link' target='_blank' href='https://github.com/chenelias/burnmd'><AiOutlineInfoCircle/></a>
             </div>
             <div className="downloadwindow" style={{ display: downloadwindow ? 'block' : 'none' }}>
-                <h1>File name</h1>
+                <h1><BsFillFileEarmarkArrowDownFill/>Save file</h1>
                 <div className="downloadinput-div">
                     <input onChange={filenametoggle} placeholder="README" type="text" className="rename-input" />
                     <h2>.md</h2>
@@ -98,7 +98,7 @@ function Nav(props) {
                     {togglecolormode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
                 </Button>
             </div>
-            <Button onClick={() => setdownloadwindow((x) => !x)} className="download-btn">
+            <Button title="Save File" onClick={() => setdownloadwindow((x) => !x)} className="download-btn">
                 {<GrDocumentDownload />}
             </Button>
         </div>
