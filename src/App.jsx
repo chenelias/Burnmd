@@ -2,7 +2,13 @@ import Editor from "./components/Editor";
 import "./index.css";
 import Nav from "./components/Nav";
 import React, { useState } from "react";
+window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'It looks like you have been editing something. '
+                            + 'If you leave before saving, your changes will be lost.';
 
+    (e || window.event).returnValue = confirmationMessage; 
+    return confirmationMessage; 
+});
 function App() {
   var [togglemdfontsize, settogglemdfontsize] = useState(30);
   var [togglecolormode, settogglecolormode] = useState(false);
