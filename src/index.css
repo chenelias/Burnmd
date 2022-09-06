@@ -76,7 +76,6 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     overflow: auto;
-    width: 88vw !important;
     height: 40vw ! important;
   }
 
@@ -218,6 +217,7 @@ body {
   padding: 10px;
   background-color: #fff;
   border-radius: 10px;
+
 }
 
 .downloadinput-div {
@@ -239,9 +239,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   border: none;
-  padding: 5px;
+  padding: 8px;
   background-color: #dfe3de;
   transition: 0.2s;
+  font-weight: bold;
 }
 
 .downloadinput-btn2:hover {
@@ -253,9 +254,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   border: none;
-  padding: 5px;
+  padding: 8px;
   background: #12b50d;
   transition: 0.2s;
+  font-weight: bold;
 }
 
 .downloadinput-btn1:hover {
@@ -274,14 +276,73 @@ body {
   opacity: 5px;
   transition: 0.2s;
 }
-.info:hover{
+
+.info:hover {
   background-color: rgb(148, 148, 148);
 }
+
 .info-link {
   color: #fff !important;
   font-size: 35px;
   position: relative;
   right: 2px;
   top: -2px;
+}
 
+.downloadwindow.update {
+  padding: 20px !important;
+  text-align: center !important;
+  padding-left: auto;
+  padding-right: auto;
+  z-index: 10;
+}
+
+.updatefile {
+  /* background-color: #0f960b !important; */
+  height: 200px;
+  width: 250px;
+  border-radius: 10px;
+  margin: 5px;
+  border: solid 3px #000;
+}
+
+::-webkit-file-upload-button {
+  display: none!important;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+  background: #12b50d;
+  transition: 0.2s;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+::-webkit-file-upload-button:hover {
+  background-color: #0f960b;
+}
+
+.uploadbox {
+  /* background-color: #3182ce; */
+  display: block;
+  height: 215px;
+  z-index: -10;
+  z-index: -10;
+}
+
+.uploadbox>h6 {
+  line-height: 20px;
+  position: relative;
+  font-size: 80px;
+  bottom: 180px;
+  z-index: -15;
+  /* background-color: #12b50d; */
+}
+.uploadbox>h6>h5{
+  margin-top: 10px;
+  font-size: 20px;
 }

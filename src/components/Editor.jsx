@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import '../index.css'
+import { useEffect } from 'react'
 
 function Editor(props) {
     var mdinput = props.mdinput
@@ -8,6 +9,7 @@ function Editor(props) {
         var y = x.target.value
         setmdinput(y)
     }
+
     return (
         <div className="mdeditor">
             <textarea
