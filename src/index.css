@@ -82,8 +82,8 @@ body {
   .mdinputarea {
     resize: vertical;
     overflow: auto;
-    width: 88vw !important;
-    height: 40vw ! important;
+    width: 100vw;
+    height: 50vw;
   }
 }
 
