@@ -102,14 +102,28 @@ function Nav(props) {
             >
                 <h1>Upload file</h1>
                 <h4 style={{ fontSize: '15px', fontWeight: 'normal' }}>
-                    Doing this will overwrite the file<br/>being edited now on this tab
+                    Doing this will overwrite the file
+                    <br />
+                    being edited now on this tab
                 </h4>
                 <div className="uploadbox">
-                    <input name="file" type="file" title="Upload File" onChange={handleUpload} className="updatefile" />
+                    <input
+                        name="file"
+                        type="file"
+                        title="Upload File"
+                        onChange={handleUpload}
+                        className="updatefile"
+                        accept=".txt,.md"
+                    />
                     <h6>
                         <BsFileEarmarkArrowUp />
-                        <h5>Drop file to here<br/>or<br/>click to choose</h5>
-
+                        <h5>
+                            Drop file to here
+                            <br />
+                            or
+                            <br />
+                            click to choose
+                        </h5>
                     </h6>
                 </div>
                 <div className="downloadinput-btn-div" style={{ display: 'flex' }}>
