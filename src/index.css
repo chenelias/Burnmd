@@ -66,7 +66,7 @@ body {
   box-shadow: transparent;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .mdeditor {
     display: block;
   }
@@ -77,13 +77,13 @@ body {
     margin-right: 10px;
     overflow: auto;
     height: 40vw ! important;
-  }
+  } 
 
   .mdinputarea {
     resize: vertical;
     overflow: auto;
-    width: 100vw;
-    height: 50vw;
+    width: 100vw !important;
+    height: 50vw !important;
   }
 }
 
@@ -304,10 +304,12 @@ body {
   border-radius: 10px;
   margin: 5px;
   border: solid 3px #000;
+  cursor: pointer;
+  font-size: 0px;
 }
 
 ::-webkit-file-upload-button {
-  display: none!important;
+  display: none !important;
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -326,6 +328,10 @@ body {
   background-color: #0f960b;
 }
 
+::-webkit-file-upload-button {
+  font-size: 20px;
+}
+
 .uploadbox {
   /* background-color: #3182ce; */
   display: block;
@@ -342,7 +348,23 @@ body {
   z-index: -15;
   /* background-color: #12b50d; */
 }
-.uploadbox>h6>h5{
+
+.uploadbox>h6>h5 {
   margin-top: 10px;
   font-size: 20px;
+}
+
+.toolsnav>div {
+  display: flex !important;
+}
+
+.toolsnav {
+  display: flex !important;
+  overflow: auto;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.toolsnav::-webkit-scrollbar {
+  display: none;
 }

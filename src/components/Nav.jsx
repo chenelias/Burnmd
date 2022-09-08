@@ -80,11 +80,13 @@ function Nav(props) {
     }
     function handleUpload(event) {
         var file = event.target.files[0]
+        var filename = event.target.files[0].name
         var reader = new FileReader()
         reader.onload = (e) => {
-            // textareainput.value += ' '
+            let filenamex = e.target.name
             let resultx = e.target.result
             props.setmdinput(resultx)
+            props.setuploadfilename(filenamex)
             textareainput.value = resultx
         }
         reader.readAsText(file)
@@ -123,11 +125,13 @@ function Nav(props) {
                             or
                             <br />
                             click to choose
+                            <br/>
+                            
                         </h5>
                     </h6>
                 </div>
                 <div className="downloadinput-btn-div" style={{ display: 'flex' }}>
-                    <button className="downloadinput-btn1" style={{ marginRight: 10 }}>
+                    <button onClick={handleUpload} className="downloadinput-btn1" style={{ marginRight: 10 }}>
                         Upload
                     </button>
                     <button onClick={() => setuploadwindow(false)} className="downloadinput-btn2">
@@ -154,6 +158,7 @@ function Nav(props) {
                     </button>
                 </div>
             </div>
+        <div className='toolsnav'>
             <div className="nav-togglesize">
                 <p className="react-icon">
                     <BiFontSize />
@@ -188,6 +193,7 @@ function Nav(props) {
             <Button title="Upload File" onClick={displaywindowupload} className="download-btn update">
                 {<BsFileEarmarkArrowUp />}
             </Button>
+        </div>
         </div>
     )
 }
