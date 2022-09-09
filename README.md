@@ -12,6 +12,7 @@
 - Use the quick add tools to add character more easy on phone device.
 - Change size of edit window with right side bottom drag icon.
 - Download editor file with markdown
+- Upload file from local strong
 
 ### link
 https://burnmd.vercel.app
