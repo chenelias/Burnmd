@@ -19,6 +19,7 @@ function Nav(props) {
         var outputy = y === '' ? 'README' : y
         setfilename(outputy)
     }
+    const fileupload = useRef('')
     const bodystyle = document.querySelector('body')
     const renameinput = document.querySelector('input')
     const textareainput = document.querySelector('textarea')
@@ -27,7 +28,8 @@ function Nav(props) {
     var setcolormodetext = togglecolormode ? '#fff' : '#000'
     const [downloadwindow, setdownloadwindow] = useState(false)
     const [uploadwindow, setuploadwindow] = useState(false)
-    const [filename, setfilename] = useState('README')
+    const [filename, setfilename] = useState('')
+    const [overwrite, setoverwrite] = useState(false)
     function add() {
         props.settogglemdfontsize((prevCount) => (prevCount < 70 ? prevCount + 5 : prevCount + 0))
     }
@@ -78,18 +80,17 @@ function Nav(props) {
             },
         })
     }
+    //Uploadfile
     function handleUpload(event) {
         var file = event.target.files[0]
-        var filename = event.target.files[0].name
         var reader = new FileReader()
         reader.onload = (e) => {
-            let filenamex = e.target.name
             let resultx = e.target.result
             props.setmdinput(resultx)
-            props.setuploadfilename(filenamex)
             textareainput.value = resultx
         }
         reader.readAsText(file)
+        setuploadwindow(false)
     }
     return (
         <div className="nav">
@@ -110,6 +111,7 @@ function Nav(props) {
                 </h4>
                 <div className="uploadbox">
                     <input
+                        ref={fileupload}
                         name="file"
                         type="file"
                         title="Upload File"
@@ -125,16 +127,19 @@ function Nav(props) {
                             or
                             <br />
                             click to choose
-                            <br/>
-                            
+                            <br />
                         </h5>
                     </h6>
                 </div>
                 <div className="downloadinput-btn-div" style={{ display: 'flex' }}>
-                    <button onClick={handleUpload} className="downloadinput-btn1" style={{ marginRight: 10 }}>
+                    {/* <button onClick={handleUpload} className="downloadinput-btn1" style={{ marginRight: 10 }}>
                         Upload
-                    </button>
-                    <button onClick={() => setuploadwindow(false)} className="downloadinput-btn2">
+                    </button> */}
+                    <button
+                        style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '20px' }}
+                        onClick={() => setuploadwindow(false)}
+                        className="downloadinput-btn2"
+                    >
                         Cancel
                     </button>
                 </div>
@@ -158,42 +163,42 @@ function Nav(props) {
                     </button>
                 </div>
             </div>
-        <div className='toolsnav'>
-            <div className="nav-togglesize">
-                <p className="react-icon">
-                    <BiFontSize />
-                </p>
-                <Button onClick={subtract} className="togglefontsize-btn">
-                    <AiOutlineMinus />
+            <div className="toolsnav">
+                <div className="nav-togglesize">
+                    <p className="react-icon">
+                        <BiFontSize />
+                    </p>
+                    <Button onClick={subtract} className="togglefontsize-btn">
+                        <AiOutlineMinus />
+                    </Button>
+                    <p className="togglefontsize-text">{props.togglemdfontsize}</p>
+                    <Button onClick={add} className="togglefontsize-btn">
+                        <AiOutlinePlus />
+                    </Button>
+                </div>
+                <div className="quickadd">
+                    <Button onClick={quickaddtexthashtag} className="quickadd-btn">
+                        #
+                    </Button>
+                    <Button onClick={quickaddtextdash} className="quickadd-btn">
+                        -
+                    </Button>
+                    <Button onClick={quickaddtextmark} className="quickadd-btn">
+                        *
+                    </Button>
+                </div>
+                <div className="togglecolormode">
+                    <Button title="Toggle ColorMode" onClick={togglebackgroundcolor} className="togglecolormode-btn">
+                        {togglecolormode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
+                    </Button>
+                </div>
+                <Button title="Save File" onClick={displaywindow} className="download-btn">
+                    {<BsFileEarmarkArrowDown />}
                 </Button>
-                <p className="togglefontsize-text">{props.togglemdfontsize}</p>
-                <Button onClick={add} className="togglefontsize-btn">
-                    <AiOutlinePlus />
+                <Button title="Upload File" onClick={displaywindowupload} className="download-btn update">
+                    {<BsFileEarmarkArrowUp />}
                 </Button>
             </div>
-            <div className="quickadd">
-                <Button onClick={quickaddtexthashtag} className="quickadd-btn">
-                    #
-                </Button>
-                <Button onClick={quickaddtextdash} className="quickadd-btn">
-                    -
-                </Button>
-                <Button onClick={quickaddtextmark} className="quickadd-btn">
-                    *
-                </Button>
-            </div>
-            <div className="togglecolormode">
-                <Button title="Toggle ColorMode" onClick={togglebackgroundcolor} className="togglecolormode-btn">
-                    {togglecolormode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
-                </Button>
-            </div>
-            <Button title="Save File" onClick={displaywindow} className="download-btn">
-                {<BsFileEarmarkArrowDown />}
-            </Button>
-            <Button title="Upload File" onClick={displaywindowupload} className="download-btn update">
-                {<BsFileEarmarkArrowUp />}
-            </Button>
-        </div>
         </div>
     )
 }
