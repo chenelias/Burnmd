@@ -77,7 +77,7 @@ body {
     margin-right: 10px;
     overflow: auto;
     height: 40vw ! important;
-  } 
+  }
 
   .mdinputarea {
     resize: vertical;
@@ -174,7 +174,7 @@ body {
 }
 
 .download-btn {
-  background-color: #7e73ff;
+  background-color: #00ff73;
   border-radius: 5px;
   font-size: 23px;
   border: none;
@@ -189,7 +189,7 @@ body {
 }
 
 .download-btn:hover {
-  background-color: #a199ff;
+  background-color: #00b04f;
 }
 
 .rename-input {
@@ -297,7 +297,16 @@ body {
   z-index: 10;
 }
 
+.download-btn.update {
+  background-color: #00b3ff !important;
+}
+
+.download-btn.update:hover {
+  background-color: #0086bf !important;
+}
+
 .updatefile {
+
   /* background-color: #0f960b !important; */
   height: 200px;
   width: 250px;
