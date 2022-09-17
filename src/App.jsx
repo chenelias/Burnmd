@@ -1,7 +1,7 @@
 import Editor from './components/Editor'
 import './index.css'
 import Nav from './components/Nav'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 window.addEventListener('beforeunload', function (e) {
     var confirmationMessage =
         'It looks like you have been editing something. ' + 'If you leave before saving, your changes will be lost.'
@@ -9,7 +9,15 @@ window.addEventListener('beforeunload', function (e) {
     return confirmationMessage
 })
 function App() {
-    var [togglemdfontsize, settogglemdfontsize] = useState(30)
+    const [togglemdfontsize, settogglemdfontsize] = useState(getsizeMode)
+   useEffect(() => {
+       localStorage.setItem(30, JSON.stringify(togglemdfontsize))
+   }, [togglemdfontsize])
+
+   function getsizeMode() {
+       const savedmode = JSON.parse(localStorage.getItem(30))
+       return savedmode
+   }
     const [togglecolormode, settogglecolormode] = useState(getMode)
     useEffect(() => {
         localStorage.setItem('dark', JSON.stringify(togglecolormode))
