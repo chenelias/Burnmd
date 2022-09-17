@@ -1,6 +1,6 @@
 # BurnMd
 
-![image](https://user-images.githubusercontent.com/76611085/188312925-ba71020d-2cbb-4acd-9ec6-6c7fccdf8206.png)
+![image](https://user-images.githubusercontent.com/76611085/190861850-b4e10ce4-8719-4918-a61a-f53309f1396a.png)
 
 ### About
 ***BurnMd***  is a the very simple markdown Editor code with React.js .
