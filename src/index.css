@@ -71,6 +71,13 @@ body {
     display: block;
   }
 
+  .nav {
+    margin: 10px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
   .mddisplay {
     margin-top: 5px;
     margin-left: 10px;
@@ -87,306 +94,311 @@ body {
   }
 }
 
-.nav {
-  margin: 10px;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
+@media only screen and (min-width: 430px) {
+  .nav {
+      justify-content: center;
+    }
+  }
 
-}
+  .nav {
+    margin: 10px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 
-.nav::-webkit-scrollbar {
-  display: none;
+  .nav::-webkit-scrollbar {
+    display: none;
 
-}
+  }
 
-.nav-togglesize {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .nav-togglesize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-button {
-  height: 35px;
-  align-items: center;
-  color: #000;
-}
+  button {
+    height: 35px;
+    align-items: center;
+    color: #000;
+  }
 
-.togglefontsize-btn {
-  border: none;
-  border-radius: 5px;
+  .togglefontsize-btn {
+    border: none;
+    border-radius: 5px;
 
-  font-size: 30px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: 0.2s;
-}
+    font-size: 30px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s;
+  }
 
-.togglefontsize-btn:hover {
-  background-color: #c0bbbb;
-}
+  .togglefontsize-btn:hover {
+    background-color: #c0bbbb;
+  }
 
-.togglefontsize-btn:active {
-  font-size: 25px;
-}
+  .togglefontsize-btn:active {
+    font-size: 25px;
+  }
 
-.togglefontsize-text {
-  font-size: 25px;
-  margin-right: 5px;
-  margin-left: 5px;
-}
+  .togglefontsize-text {
+    font-size: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 
-/* icon */
-.react-icon {
-  font-size: 30px;
-  align-items: center;
-  display: flex;
-  margin-right: 2px;
-}
+  /* icon */
+  .react-icon {
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    margin-right: 2px;
+  }
 
-.quickadd-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-left: 5px;
-  font-size: 28px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 13px;
-  padding-right: 13px;
-}
+  .quickadd-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 5px;
+    font-size: 28px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
 
-.quickadd-btn:hover {
-  background-color: #c0bbbb;
-}
+  .quickadd-btn:hover {
+    background-color: #c0bbbb;
+  }
 
-.quickadd-btn:active {
-  font-size: 20px;
-}
+  .quickadd-btn:active {
+    font-size: 20px;
+  }
 
-.togglecolormode-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: 0.2s;
-  font-size: 22px;
-  margin-left: 10px;
-  padding: 5px;
-}
+  .togglecolormode-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 22px;
+    margin-left: 10px;
+    padding: 5px;
+  }
 
-.togglecolormode-btn:hover {
-  background-color: #c0bbbb;
-}
+  .togglecolormode-btn:hover {
+    background-color: #c0bbbb;
+  }
 
-.togglecolormode-btn:active {
-  font-size: 18px;
-}
+  .togglecolormode-btn:active {
+    font-size: 18px;
+  }
 
-.download-btn {
-  background-color: #00ff73;
-  border-radius: 5px;
-  font-size: 23px;
-  border: none;
-  padding: 5px;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: 0.2s;
-}
+  .download-btn {
+    background-color: #00ff73;
+    border-radius: 5px;
+    font-size: 23px;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
 
-.download-btn:active {
-  font-size: 18px;
-}
+  .download-btn:active {
+    font-size: 18px;
+  }
 
-.download-btn:hover {
-  background-color: #00b04f;
-}
+  .download-btn:hover {
+    background-color: #00b04f;
+  }
 
-.rename-input {
-  border-radius: 5px;
-  border: solid 3px #000;
-  position: relative;
-  font-size: 25px;
-  padding: 5px;
-  font-family: monospace;
-}
+  .rename-input {
+    border-radius: 5px;
+    border: solid 3px #000;
+    position: relative;
+    font-size: 25px;
+    padding: 5px;
+    font-family: monospace;
+  }
 
-.rename-input:focus {
-  outline: none !important;
-  border: solid 3px #3182ce !important;
-}
+  .rename-input:focus {
+    outline: none !important;
+    border: solid 3px #3182ce !important;
+  }
 
-.downloadwindow {
-  color: #000 !important;
-  position: absolute;
-  /* border: solid 2px #000 ; */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 10px;
+  .downloadwindow {
+    color: #000 !important;
+    position: absolute;
+    /* border: solid 2px #000 ; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
 
-}
+  }
 
-.downloadinput-div {
-  display: flex;
-}
+  .downloadinput-div {
+    display: flex;
+  }
 
-.downloadinput-div>h2 {
-  margin-top: 20px;
-  margin-left: 5px;
-  font-size: 25px;
-}
+  .downloadinput-div>h2 {
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 25px;
+  }
 
-.downloadinput-btn-div {
-  margin-top: 10px;
-}
+  .downloadinput-btn-div {
+    margin-top: 10px;
+  }
 
-.downloadinput-btn2 {
-  font-size: 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  padding: 8px;
-  background-color: #dfe3de;
-  transition: 0.2s;
-  font-weight: bold;
-  height: 40px;
-}
+  .downloadinput-btn2 {
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    background-color: #dfe3de;
+    transition: 0.2s;
+    font-weight: bold;
+    height: 40px;
+  }
 
-.downloadinput-btn2:hover {
-  background-color: #c4c4c4;
-}
+  .downloadinput-btn2:hover {
+    background-color: #c4c4c4;
+  }
 
-.downloadinput-btn1 {
-  height: 40px;
-  font-size: 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  padding: 8px;
-  background: #12b50d;
-  transition: 0.2s;
-  font-weight: bold;
-}
+  .downloadinput-btn1 {
+    height: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    background: #12b50d;
+    transition: 0.2s;
+    font-weight: bold;
+  }
 
-.downloadinput-btn1:hover {
-  background-color: #0f960b;
-}
+  .downloadinput-btn1:hover {
+    background-color: #0f960b;
+  }
 
-.info {
-  border-radius: 50%;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgb(240, 239, 239);
-  padding: 5px;
-  height: 30px;
-  width: 30px;
-  opacity: 5px;
-  transition: 0.2s;
-}
+  .info {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(240, 239, 239);
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    opacity: 5px;
+    transition: 0.2s;
+  }
 
-.info:hover {
-  background-color: rgb(148, 148, 148);
-}
+  .info:hover {
+    background-color: rgb(148, 148, 148);
+  }
 
-.info-link {
-  color: #fff !important;
-  font-size: 35px;
-  position: relative;
-  right: 2px;
-  top: -2px;
-}
+  .info-link {
+    color: #fff !important;
+    font-size: 35px;
+    position: relative;
+    right: 2px;
+    top: -2px;
+  }
 
-.downloadwindow.update {
-  padding: 20px !important;
-  text-align: center !important;
-  padding-left: auto;
-  padding-right: auto;
-  z-index: 10;
-}
+  .downloadwindow.update {
+    padding: 20px !important;
+    text-align: center !important;
+    padding-left: auto;
+    padding-right: auto;
+    z-index: 10;
+  }
 
-.download-btn.update {
-  background-color: #00b3ff !important;
-}
+  .download-btn.update {
+    background-color: #00b3ff !important;
+  }
 
-.download-btn.update:hover {
-  background-color: #0086bf !important;
-}
+  .download-btn.update:hover {
+    background-color: #0086bf !important;
+  }
 
-.updatefile {
-  /* background-color: #0f960b !important; */
-  height: 200px;
-  width: 250px;
-  border-radius: 10px;
-  margin: 5px;
-  border: solid 3px #000;
-  cursor: pointer;
-  font-size: 0px;
-}
+  .updatefile {
+    /* background-color: #0f960b !important; */
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 5px;
+    border: solid 3px #000;
+    cursor: pointer;
+    font-size: 0px;
+  }
 
-::-webkit-file-upload-button {
-  display: none !important;
-  font-size: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  padding: 8px;
-  background: #12b50d;
-  transition: 0.2s;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+  ::-webkit-file-upload-button {
+    display: none !important;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    background: #12b50d;
+    transition: 0.2s;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 
-::-webkit-file-upload-button:hover {
-  background-color: #0f960b;
-}
+  ::-webkit-file-upload-button:hover {
+    background-color: #0f960b;
+  }
 
-::-webkit-file-upload-button {
-  font-size: 20px;
-}
+  ::-webkit-file-upload-button {
+    font-size: 20px;
+  }
 
-.uploadbox {
-  /* background-color: #3182ce; */
-  display: block;
-  height: 215px;
-  z-index: -10;
-  z-index: -10;
-}
+  .uploadbox {
+    /* background-color: #3182ce; */
+    display: block;
+    height: 215px;
+    z-index: -10;
+    z-index: -10;
+  }
 
-.uploadbox>h6 {
-  line-height: 20px;
-  position: relative;
-  font-size: 80px;
-  bottom: 180px;
-  z-index: -15;
-  /* background-color: #12b50d; */
-}
+  .uploadbox>h6 {
+    line-height: 20px;
+    position: relative;
+    font-size: 80px;
+    bottom: 180px;
+    z-index: -15;
+    /* background-color: #12b50d; */
+  }
 
-.uploadbox>h6>h5 {
-  margin-top: 10px;
-  font-size: 20px;
-}
+  .uploadbox>h6>h5 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
 
-.toolsnav>div {
-  display: flex !important;
-}
+  .toolsnav>div {
+    display: flex !important;
+  }
 
-.toolsnav {
-  display: flex !important;
-  overflow: auto;
-  margin: 10px;
-  border-radius: 5px;
-}
+  .toolsnav {
+    display: flex !important;
+    overflow: auto;
+    margin: 10px;
+    border-radius: 5px;
+  }
 
-.toolsnav::-webkit-scrollbar {
-  display: none;
-}
+  .toolsnav::-webkit-scrollbar {
+    display: none;
+  }
