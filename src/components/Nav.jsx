@@ -3,14 +3,7 @@ import { Button } from '@chakra-ui/react'
 import React, { useState, useEffect, useRef } from 'react'
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineInfoCircle } from 'react-icons/ai'
 import { BiFontSize, BiSleepy } from 'react-icons/bi'
-import {
-    BsFillMoonStarsFill,
-    BsFillSunFill,
-    BsFileEarmarkArrowUp,
-    BsFileEarmarkArrowDown,
-    BsFillFileEarmarkArrowDownFill,
-} from 'react-icons/bs'
-import { GrDocumentDownload } from 'react-icons/gr'
+import { BsFillMoonStarsFill, BsFillSunFill, BsFileEarmarkArrowUp, BsFileEarmarkArrowDown } from 'react-icons/bs'
 import '../index.css'
 import axios, { post } from 'axios'
 function Nav(props) {
@@ -133,7 +126,7 @@ function Nav(props) {
                     </button> */}
                     <button
                         onClick={() => setuploadwindow(false)}
-                        style={{ marginLeft: 'auto', marginRight: 'auto' ,marginTop:'10px'}}
+                        style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '10px' }}
                         className="downloadinput-btn2"
                     >
                         Cancel
@@ -171,7 +164,7 @@ function Nav(props) {
                     <AiOutlinePlus />
                 </Button>
             </div>
-            <div className="quickadd" style={{display:'flex'}}>
+            <div className="quickadd" style={{ display: 'flex' }}>
                 <Button onClick={quickaddtexthashtag} className="quickadd-btn">
                     #
                 </Button>
