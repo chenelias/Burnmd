@@ -171,7 +171,7 @@ function Nav(props) {
                     <AiOutlinePlus />
                 </Button>
             </div>
-            <div className="quickadd">
+            <div className="quickadd" style={{display:'flex'}}>
                 <Button onClick={quickaddtexthashtag} className="quickadd-btn">
                     #
                 </Button>

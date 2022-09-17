@@ -88,10 +88,15 @@ body {
 }
 
 .nav {
-  margin-bottom: 10px;
+  margin: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 
 }
 
@@ -101,9 +106,16 @@ body {
   align-items: center;
 }
 
+button {
+  height: 35px;
+  align-items: center;
+  color: #000;
+}
+
 .togglefontsize-btn {
   border: none;
   border-radius: 5px;
+
   font-size: 30px;
   background-color: #f0f0f0;
   cursor: pointer;
@@ -243,6 +255,7 @@ body {
   background-color: #dfe3de;
   transition: 0.2s;
   font-weight: bold;
+  height: 40px;
 }
 
 .downloadinput-btn2:hover {
@@ -250,6 +263,7 @@ body {
 }
 
 .downloadinput-btn1 {
+  height: 40px;
   font-size: 25px;
   border-radius: 5px;
   cursor: pointer;
@@ -269,7 +283,7 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: rgb(219, 219, 219);
+  background-color: rgb(240, 239, 239);
   padding: 5px;
   height: 30px;
   width: 30px;
@@ -306,7 +320,6 @@ body {
 }
 
 .updatefile {
-
   /* background-color: #0f960b !important; */
   height: 200px;
   width: 250px;
