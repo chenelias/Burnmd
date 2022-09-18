@@ -9,15 +9,7 @@ window.addEventListener('beforeunload', function (e) {
     return confirmationMessage
 })
 function App() {
-    const [togglemdfontsize, settogglemdfontsize] = useState(getsizeMode)
-   useEffect(() => {
-       localStorage.setItem(30, JSON.stringify(togglemdfontsize))
-   }, [togglemdfontsize])
-
-   function getsizeMode() {
-       const savedmode = JSON.parse(localStorage.getItem(30))
-       return savedmode
-   }
+    const [togglemdfontsize, settogglemdfontsize] = useState(30)
     const [togglecolormode, settogglecolormode] = useState(getMode)
     useEffect(() => {
         localStorage.setItem('dark', JSON.stringify(togglecolormode))
