@@ -1,7 +1,7 @@
 import { saveAs } from 'file-saver'
 import { Button } from '@chakra-ui/react'
 import React, { useState, useEffect, useRef } from 'react'
-import { AiOutlinePlus, AiOutlineMinus, AiOutlineInfoCircle } from 'react-icons/ai'
+import { AiOutlinePlus, AiOutlineMinus, AiFillGithub } from 'react-icons/ai'
 import { BiFontSize, BiSleepy } from 'react-icons/bi'
 import { BsFillMoonStarsFill, BsFillSunFill, BsFileEarmarkArrowUp, BsFileEarmarkArrowDown } from 'react-icons/bs'
 import '../index.css'
@@ -87,7 +87,7 @@ function Nav(props) {
         <div className="nav">
             <div className="info">
                 <a className="info-link" target="_blank" href="https://github.com/chenelias/burnmd">
-                    <AiOutlineInfoCircle />
+                    <AiFillGithub />
                 </a>
             </div>
             <div
@@ -152,6 +152,7 @@ function Nav(props) {
                     </button>
                 </div>
             </div>
+            <div className="copyright"><p>&copy;&thinsp;Burnmd eliaschen {new Date().getFullYear()}</p></div>
             <div className="nav-togglesize">
                 <p className="react-icon">
                     <BiFontSize />

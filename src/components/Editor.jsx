@@ -1,7 +1,9 @@
 import ReactMarkdown from 'react-markdown'
 import '../index.css'
-import { useEffect } from 'react'
-
+// import SyntaxHighlighter from 'react-syntax-highlighter'
+// import { useEffect } from 'react'
+// import unified from 'unified'
+import remarkGfm from 'remark-gfm'
 function Editor(props) {
     var mdinput = props.mdinput
     var setmdinput = props.setmdinput
@@ -24,7 +26,7 @@ function Editor(props) {
                 onChange={toggleinput}
             ></textarea>
             <p style={{ fontSize: props.togglemdfontsize }}>
-                <ReactMarkdown style={{ fontSize: 20 }} className="mddisplay">
+                <ReactMarkdown style={{ fontSize: 20 }} remarkPlugins={([remarkGfm])} className="mddisplay">
                     {mdinput}
                 </ReactMarkdown>
             </p>

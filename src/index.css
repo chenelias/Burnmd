@@ -308,7 +308,7 @@ body {
   }
 
   .info-link {
-    color: #fff !important;
+    color: rgb(184, 184, 184) !important;
     font-size: 35px;
     position: relative;
     right: 2px;
@@ -401,4 +401,10 @@ body {
 
   .toolsnav::-webkit-scrollbar {
     display: none;
+  }
+  .copyright{
+    position: fixed;
+    z-index: 10;
+    bottom: 5px;
+    font-size:15px;
   }
