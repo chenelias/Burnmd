@@ -2,6 +2,20 @@
 
 ![image](https://user-images.githubusercontent.com/76611085/190861850-b4e10ce4-8719-4918-a61a-f53309f1396a.png)
 
+```
+$ROOT_PROJECT
+├─public # Static Assets
+│      index.html	# Index HTML		
+│      
+└─src		# Source code of react
+    │  App.jsx		# Mach all components
+    │  index.css	# CSS of whole project
+    │  index.js		# React Call 
+    │  
+    └─components	# Components of project	
+            Editor.jsx	 
+            Nav.jsx	
+```
 ### About
 ***BurnMd***  is a the very simple markdown Editor code with React.js .
 
