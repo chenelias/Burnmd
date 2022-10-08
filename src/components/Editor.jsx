@@ -1,7 +1,5 @@
 import ReactMarkdown from 'react-markdown'
 import '../index.css'
-// import SyntaxHighlighter from 'react-syntax-highlighter'
-// import { useEffect } from 'react'
 // import unified from 'unified'
 import remarkGfm from 'remark-gfm'
 function Editor(props) {
