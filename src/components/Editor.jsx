@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import '../index.css'
+import React,{ useState, useEffect} from 'react'
 // import unified from 'unified'
 import remarkGfm from 'remark-gfm'
 function Editor(props) {
