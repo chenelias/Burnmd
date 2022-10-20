@@ -15,12 +15,17 @@ function Nav(props) {
     const bodystyle = document.querySelector('body')
     const renameinput = document.querySelector('input')
     const textareainput = document.querySelector('textarea')
+    const codediv = document.querySelector('pre')
     const togglecolormode = props.togglecolormode
     var setcolormode = togglecolormode ? '#191e2a' : '#fff'
     var setcolormodetext = togglecolormode ? '#fff' : '#000'
     const [downloadwindow, setdownloadwindow] = useState(false)
     const [uploadwindow, setuploadwindow] = useState(false)
     const [filename, setfilename] = useState('README')
+    // useEffect(()=>{
+    //     codediv.style.fontSize = props.togglemdfontsize - 20 +"px"
+
+    // },[props.togglemdfontsize])
     function add() {
         props.settogglemdfontsize((prevCount) => (prevCount < 70 ? prevCount + 5 : prevCount + 0))
     }
