@@ -142,7 +142,7 @@ button {
 }
 
 .togglefontsize-btn:active {
-  font-size: 25px;
+  background-color: #979797;
 }
 
 .togglefontsize-text {
@@ -178,7 +178,7 @@ button {
 }
 
 .quickadd-btn:active {
-  font-size: 20px;
+  background-color: #979797;
 }
 
 .togglecolormode-btn {
@@ -197,7 +197,7 @@ button {
 }
 
 .togglecolormode-btn:active {
-  font-size: 18px;
+  background-color: #979797;
 }
 
 .download-btn {
@@ -212,7 +212,7 @@ button {
 }
 
 .download-btn:active {
-  font-size: 18px;
+  background-color: #b3b3b3;
 }
 
 .download-btn:hover {
