@@ -101,6 +101,7 @@ function Nav(props) {
                 className="downloadwindow update"
             >
                 <h1>Upload file</h1>
+                <p className='uploadfilealert'>(.md&ensp;.mdx&ensp;.txt)</p>
                 <h4 style={{ fontSize: '15px', fontWeight: 'normal' }}>
                     Doing this will overwrite the file
                     <br />
@@ -115,7 +116,7 @@ function Nav(props) {
                         className="updatefile"
                         accept=".txt,.md,.mdx"
                     />
-                    <h6>
+                    <h6 className="h6upload">
                         <BsFileEarmarkArrowUp />
                         <h5>
                             Drop file to here

@@ -359,7 +359,11 @@ button {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
+.uploadfilealert{
+    font-size: 17px;
+    font-family: monospace;
+    font-weight: bold;
+}
 ::-webkit-file-upload-button:hover {
     background-color: #0f960b;
 }
@@ -371,7 +375,7 @@ button {
 .uploadbox {
     /* background-color: #3182ce; */
     display: block;
-    height: 215px;
+    height: 220px;
     z-index: -10;
     z-index: -10;
 }
@@ -447,7 +451,7 @@ img {
 }
 
 .mddisplay > blockquote {
-    margin: 10px 0px;
+    margin: 5px 20px;
     padding: 10px 10px;
     border-left: solid 5px #a7a7a7;
 }
