@@ -1,481 +1,489 @@
 * {
-  font-family: sans-serif;
-  margin: 0;
+    font-family: sans-serif;
+    margin: 0;
 }
 
 .mddisplay {
-  overflow: auto;
-  border-radius: 10px;
-  padding: 10px;
-  margin-right: 5px;
-  line-height: auto;
-  max-width: 50vw;
-  height: 80vh;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+    line-height: auto;
+    max-width: 50vw;
+    height: 80vh;
 }
 
 body {
-  padding-bottom: 0;
-  padding-top: 10px;
-  transition: 0.1s;
+    padding-bottom: 0;
+    padding-top: 10px;
+    transition: 0.1s;
 }
 
 .mdinputarea {
-  min-width: 40vw;
-  max-width: 50vw;
-  resize: horizontal;
-  overflow: auto;
-  height: 80vh;
-  padding: 15px;
-  font-size: 25px;
-  border-radius: 10px;
-  margin-left: 5px;
-  margin-right: 15px;
-  transition: 0s;
+    min-width: 40vw;
+    max-width: 50vw;
+    resize: horizontal;
+    overflow: auto;
+    height: 80vh;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 15px;
+    transition: 0s;
 }
 
 .mdinputarea:focus {
-  outline: none !important;
-  border: 3px solid #3182ce !important;
+    outline: none !important;
+    border: 3px solid #3182ce !important;
 }
 
 .mdeditor {
-  display: flex;
+    display: flex;
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+    width: 12px;
+    height: 12px;
 }
 
 ::-webkit-scrollbar-button {
-  display: none;
+    display: none;
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: #000;
-  border-radius: 10px;
+    background: #000;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #fff;
-  border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 3px solid #000;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: transparent;
+    box-shadow: transparent;
 }
 
 @media only screen and (max-width: 600px) {
-  .mdeditor {
-    display: block;
-  }
+    .mdeditor {
+        display: block;
+    }
 
-  .nav {
+    .nav {
+        margin: 10px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .mddisplay {
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        overflow: auto;
+        height: 60vw !important;
+        max-width: 100vh !important;
+    }
+
+    .mdinputarea {
+        resize: vertical;
+        overflow: auto;
+        /* max-width: 100vh !important; */
+        height: 50vw !important;
+    }
+}
+
+@media only screen and (min-width: 430px) {
+    .nav {
+        justify-content: center;
+    }
+
+    .mdinputarea {
+    }
+}
+
+.nav {
     margin: 10px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-  }
-
-  .mddisplay {
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    overflow: auto;
-    height: 60vw ! important;
-    max-width: 100vh !important;
-  }
-
-  .mdinputarea {
-    resize: vertical;
-    overflow: auto;
-    /* max-width: 100vh !important; */
-    height: 50vw !important;
-  }
-}
-
-@media only screen and (min-width: 430px) {
-  .nav {
-    justify-content: center;
-  }
-
-  .mdinputarea {}
-}
-
-.nav {
-  margin: 10px;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
 .nav::-webkit-scrollbar {
-  display: none;
-
+    display: none;
 }
 
 .nav-togglesize {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
-  height: 35px;
-  align-items: center;
-  color: #000;
+    height: 35px;
+    align-items: center;
+    color: #000;
 }
 
 .togglefontsize-btn {
-  border: none;
-  border-radius: 5px;
+    border: none;
+    border-radius: 5px;
 
-  font-size: 30px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: 0.2s;
+    font-size: 30px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .togglefontsize-btn:hover {
-  background-color: #c0bbbb;
+    background-color: #c0bbbb;
 }
 
 .togglefontsize-btn:active {
-  background-color: #979797;
+    background-color: #979797;
 }
 
 .togglefontsize-text {
-  font-size: 25px;
-  margin-right: 5px;
-  margin-left: 5px;
+    font-size: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /* icon */
 .react-icon {
-  font-size: 30px;
-  align-items: center;
-  display: flex;
-  margin-right: 2px;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    margin-right: 2px;
 }
 
 .quickadd-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-left: 5px;
-  font-size: 28px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 13px;
-  padding-right: 13px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 5px;
+    font-size: 28px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
 
 .quickadd-btn:hover {
-  background-color: #c0bbbb;
+    background-color: #c0bbbb;
 }
 
 .quickadd-btn:active {
-  background-color: #979797;
+    background-color: #979797;
 }
 
 .togglecolormode-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: 0.2s;
-  font-size: 22px;
-  margin-left: 10px;
-  padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 22px;
+    margin-left: 10px;
+    padding: 5px;
 }
 
 .togglecolormode-btn:hover {
-  background-color: #c0bbbb;
+    background-color: #c0bbbb;
 }
 
 .togglecolormode-btn:active {
-  background-color: #979797;
+    background-color: #979797;
 }
 
 .download-btn {
-  background-color: #00ff73;
-  border-radius: 5px;
-  font-size: 23px;
-  border: none;
-  padding: 5px;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: 0.2s;
+    background-color: #00ff73;
+    border-radius: 5px;
+    font-size: 23px;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .download-btn:active {
-  background-color: #b3b3b3;
+    background-color: #b3b3b3;
 }
 
 .download-btn:hover {
-  background-color: #00b04f;
+    background-color: #00b04f;
 }
 
 .rename-input {
-  border-radius: 5px;
-  border: solid 3px #000;
-  position: relative;
-  font-size: 25px;
-  padding: 5px;
-  font-family: monospace;
+    border-radius: 5px;
+    border: solid 3px #000;
+    position: relative;
+    font-size: 25px;
+    padding: 5px;
+    font-family: monospace;
 }
 
 .rename-input:focus {
-  outline: none !important;
-  border: solid 3px #3182ce !important;
+    outline: none !important;
+    border: solid 3px #3182ce !important;
 }
 
 .downloadwindow {
-  color: #000 !important;
-  position: absolute;
-  /* border: solid 2px #000 ; */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 10px;
-
+    color: #000 !important;
+    position: absolute;
+    /* border: solid 2px #000 ; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .downloadinput-div {
-  display: flex;
+    display: flex;
 }
 
-.downloadinput-div>h2 {
-  margin-top: 20px;
-  margin-left: 5px;
-  font-size: 25px;
+.downloadinput-div > h2 {
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 25px;
 }
 
 .downloadinput-btn-div {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .downloadinput-btn2 {
-  font-size: 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  padding: 8px;
-  background-color: #dfe3de;
-  transition: 0.2s;
-  font-weight: bold;
-  height: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    background-color: #dfe3de;
+    transition: 0.2s;
+    font-weight: bold;
+    height: 40px;
 }
 
 .downloadinput-btn2:hover {
-  background-color: #c4c4c4;
+    background-color: #c4c4c4;
 }
 
 .downloadinput-btn1 {
-  height: 40px;
-  font-size: 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  padding: 8px;
-  background: #12b50d;
-  transition: 0.2s;
-  font-weight: bold;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    background: #12b50d;
+    transition: 0.2s;
+    font-weight: bold;
 }
 
 .downloadinput-btn1:hover {
-  background-color: #0f960b;
+    background-color: #0f960b;
 }
 
 .info {
-  border-radius: 50%;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgb(240, 239, 239);
-  padding: 5px;
-  height: 30px;
-  width: 30px;
-  opacity: 5px;
-  transition: 0.2s;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(240, 239, 239);
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    opacity: 5px;
+    transition: 0.2s;
 }
 
 .info:hover {
-  background-color: rgb(148, 148, 148);
+    background-color: rgb(148, 148, 148);
 }
 
 .info-link {
-  color: rgb(184, 184, 184) !important;
-  font-size: 35px;
-  position: relative;
-  right: 2px;
-  top: -2px;
+    color: rgb(184, 184, 184) !important;
+    font-size: 35px;
+    position: relative;
+    right: 2px;
+    top: -2px;
 }
 
 .downloadwindow.update {
-  padding: 20px !important;
-  text-align: center !important;
-  padding-left: auto;
-  padding-right: auto;
-  z-index: 10;
+    padding: 20px !important;
+    text-align: center !important;
+    padding-left: auto;
+    padding-right: auto;
+    z-index: 10;
 }
 
 .download-btn.update {
-  background-color: #00b3ff !important;
+    background-color: #00b3ff !important;
 }
 
 .download-btn.update:hover {
-  background-color: #0086bf !important;
+    background-color: #0086bf !important;
 }
 
 .updatefile {
-  /* background-color: #0f960b !important; */
-  height: 200px;
-  width: 250px;
-  border-radius: 10px;
-  margin: 5px;
-  border: solid 3px #000;
-  cursor: pointer;
-  font-size: 0px;
+    /* background-color: #0f960b !important; */
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 5px;
+    border: solid 3px #000;
+    cursor: pointer;
+    font-size: 0px;
 }
 
 ::-webkit-file-upload-button {
-  display: none !important;
-  font-size: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  padding: 8px;
-  background: #12b50d;
-  transition: 0.2s;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+    display: none !important;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    background: #12b50d;
+    transition: 0.2s;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 ::-webkit-file-upload-button:hover {
-  background-color: #0f960b;
+    background-color: #0f960b;
 }
 
 ::-webkit-file-upload-button {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .uploadbox {
-  /* background-color: #3182ce; */
-  display: block;
-  height: 215px;
-  z-index: -10;
-  z-index: -10;
+    /* background-color: #3182ce; */
+    display: block;
+    height: 215px;
+    z-index: -10;
+    z-index: -10;
 }
 
-.uploadbox>h6 {
-  line-height: 20px;
-  position: relative;
-  font-size: 80px;
-  bottom: 180px;
-  z-index: -15;
-  /* background-color: #12b50d; */
+.uploadbox > h6 {
+    line-height: 20px;
+    position: relative;
+    font-size: 80px;
+    bottom: 180px;
+    z-index: -15;
+    /* background-color: #12b50d; */
 }
 
-.uploadbox>h6>h5 {
-  margin-top: 10px;
-  font-size: 20px;
+.uploadbox > h6 > h5 {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
-.toolsnav>div {
-  display: flex !important;
+.toolsnav > div {
+    display: flex !important;
 }
 
 .toolsnav {
-  display: flex !important;
-  overflow: auto;
-  margin: 10px;
-  border-radius: 5px;
+    display: flex !important;
+    overflow: auto;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 .toolsnav::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .copyright {
-  position: fixed;
-  z-index: 10;
-  bottom: 5px;
-  font-size: 15px;
+    position: fixed;
+    z-index: 10;
+    bottom: 5px;
+    font-size: 15px;
 }
 
-.mddisplay>h1 {
+.mddisplay > table {
+    margin: 10px 0px;
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.mddisplay>table {
-  margin: 10px 0px;
-  border: solid 2px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.mddisplay>pre,
+.mddisplay > pre,
 code {
-  font-family: monospace;
-  border-radius: 5px;
-  background: #ffeaa5;
-  color: #000;
-  padding: 5px;
-  margin: 0px 5px;
+    font-family: monospace;
+    border-radius: 5px;
+    background: #ffeaa5;
+    color: #000;
+    padding: 5px;
+    margin: 0px 5px;
 }
 
-.mddisplay>pre {
-  background-color: #2c2c2c !important;
-  padding: 10px !important;
-  color: #fff !important;
-  border-radius: 10px !important;
-  margin: 10px 0px;
+.mddisplay > pre {
+    background-color: #2c2c2c !important;
+    padding: 10px !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    margin: 10px 0px;
 }
-img{
-  max-width: 100%;
+img {
+    max-width: 100%;
 }
-.mddisplay>pre>code {
-  color: #fff !important;
-  background: none !important;
-  margin: none !important;
-  padding: none !important;
+.mddisplay > pre > code {
+    color: #fff !important;
+    background: none !important;
+    margin: none !important;
+    padding: none !important;
 }
 
-.mddisplay>blockquote {
-  margin: 10px 0px;
-  padding: 10px 10px;
-  border-left: solid 5px #a7a7a7;
+.mddisplay > blockquote {
+    margin: 10px 0px;
+    padding: 10px 10px;
+    border-left: solid 5px #a7a7a7;
 }
-.mddisplay>strong{
-  background-color: #ffb634;
+.mddisplay > strong {
+    background-color: #ffb634;
 }
 /* selection */
 *::selection {
-  background-color: #fed7aa;
-  color: #ae58ff;
+    background-color: #fed7aa;
+    color: #ae58ff;
 }
 
 span::selection {
-  background-color: rgba(139, 255, 160, 0.853) !important;
+    background-color: rgba(139, 255, 160, 0.853) !important;
 }
 
 code::selection {
-  background-color: rgba(139, 255, 160, 0.853) !important;
+    background-color: rgba(139, 255, 160, 0.853) !important;
 }
 
 a::selection {
-  background-color: rgba(139, 255, 160, 0.853) !important;
+    background-color: rgba(139, 255, 160, 0.853) !important;
 }
 
 img::selection {
-  background-color: #75757882;
+    background-color: #75757882;
+}
+.filetype-input {
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: none;
+    margin-left: 4px;
+    border: #000 solid 3px;
+}
+.filetype-input:focus {
+  outline: none !important;
+  border: solid 3px #ffb13c !important;
 }

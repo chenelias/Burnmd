@@ -22,6 +22,7 @@ function Nav(props) {
     const [downloadwindow, setdownloadwindow] = useState(false)
     const [uploadwindow, setuploadwindow] = useState(false)
     const [filename, setfilename] = useState('README')
+    const [filetype, setfiletype] = useState('.md')
     // useEffect(()=>{
     //     codediv.style.fontSize = props.togglemdfontsize - 20 +"px"
 
@@ -62,7 +63,7 @@ function Nav(props) {
     }, [togglecolormode])
 
     function downloadfile() {
-        var file = new File([props.mdinput], `${filename + '.md'}`, { type: 'markdown/plain;charset=utf-8' })
+        var file = new File([props.mdinput], `${filename + '.' + filetype}`, { type: 'markdown/plain;charset=utf-8' })
         saveAs(file)
         setdownloadwindow(false)
     }
@@ -112,7 +113,7 @@ function Nav(props) {
                         title="Upload File"
                         onChange={handleUpload}
                         className="updatefile"
-                        accept=".txt,.md"
+                        accept=".txt,.md,.mdx"
                     />
                     <h6>
                         <BsFileEarmarkArrowUp />
@@ -138,7 +139,7 @@ function Nav(props) {
                     </button>
                 </div>
             </div>
-
+            {/* Download windows */}
             <div
                 className="downloadwindow"
                 style={{ display: downloadwindow ? 'block' : 'none', alignItems: 'center' }}
@@ -146,7 +147,17 @@ function Nav(props) {
                 <h1>Save file</h1>
                 <div className="downloadinput-div">
                     <input onChange={filenametoggle} placeholder="README" type="text" className="rename-input" />
-                    <h2>.md</h2>
+                    <select
+                        class="filetype-input"
+                        defaultValue={filetype}
+                        onChange={(x) => setfiletype(x.target.value)}
+                    >
+                        <option selected value="md">
+                            .md
+                        </option>
+                        <option value="mdx">.mdx</option>
+                        <option value="txt">.txt</option>
+                    </select>
                 </div>
                 <div className="downloadinput-btn-div" style={{ display: 'flex' }}>
                     <button onClick={downloadfile} className="downloadinput-btn1" style={{ marginRight: 10 }}>
@@ -157,7 +168,9 @@ function Nav(props) {
                     </button>
                 </div>
             </div>
-            <div className="copyright"><p>&copy;&thinsp;Burnmd eliaschen {new Date().getFullYear()}</p></div>
+            <div className="copyright">
+                <p>&copy;&thinsp;Burnmd eliaschen {new Date().getFullYear()}</p>
+            </div>
             <div className="nav-togglesize">
                 <p className="react-icon">
                     <BiFontSize />
