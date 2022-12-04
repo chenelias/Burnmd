@@ -63,7 +63,7 @@ function Nav(props) {
     }, [togglecolormode])
 
     function downloadfile() {
-        var file = new File([props.mdinput], `${filename + '.' + filetype}`, { type: 'markdown/plain;charset=utf-8' })
+        var file = new File([props.mdinput], `${filename + filetype}`, { type: 'markdown/plain;charset=utf-8' })
         saveAs(file)
         setdownloadwindow(false)
     }
