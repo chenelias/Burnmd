@@ -22,7 +22,7 @@ function Nav(props) {
     const [downloadwindow, setdownloadwindow] = useState(false)
     const [uploadwindow, setuploadwindow] = useState(false)
     const [filename, setfilename] = useState('README')
-    const [filetype, setfiletype] = useState('.md')
+    const [filetype, setfiletype] = useState('md')
     // useEffect(()=>{
     //     codediv.style.fontSize = props.togglemdfontsize - 20 +"px"
 
@@ -63,7 +63,7 @@ function Nav(props) {
     }, [togglecolormode])
 
     function downloadfile() {
-        var file = new File([props.mdinput], `${filename + filetype}`, { type: 'markdown/plain;charset=utf-8' })
+        var file = new File([props.mdinput], `${filename +"." + filetype}`, { type: 'markdown/plain;charset=utf-8' })
         saveAs(file)
         setdownloadwindow(false)
     }
